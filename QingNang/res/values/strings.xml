@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">青囊</string>
+    <string name="no_data">无数据</string>
+    <string name="add_reminder">添加提醒</string>
+    <string name="delete">删除</string>  
+    <string name="ok">确定</string>
+    <string name="cancel">取消</string>
+    
+    <string name="done">完成</string>
+    
+    <string name="picture">图片</string>
+    <string name="edit_reminder">用药提醒设置</string>
+
+    <string name="usage_type">用药方式</string>
+    <string name="usage_amount">用药数量</string>
+    <string name="begin_date">起始日期</string>
+    <string name="end_date">结束日期</string>
+    <string name="select_usage_type">请选择用药方式</string>
+    
+    <string name="msg_default_format">格式</string>
+	<string name="msg_default_meta">元数据</string>
+	<string name="msg_default_mms_subject">Hi</string>
+	<string name="msg_default_status">请将条码置于取景框内扫描</string>
+	<string name="msg_default_time">时间</string>
+	<string name="msg_default_type">类型</string>
+	
+	<string name="manually_input">或者手动输入</string>
+	
+    
+</resources>

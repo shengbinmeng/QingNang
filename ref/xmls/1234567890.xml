@@ -1,0 +1,44 @@
+<root batchnumber="1234567890">
+  <check batchnumber="1234567890">E5287B23256468A2CA2EADE53DC66EDD</check>
+  <name generalname="显示即可" commercialname="显示即可" englishname="显示即可" pingyin="显示即可" readablename="显示名称是软件运行过程中对用户显示的药品名称" />
+  <component>说明书的原文，在说明书界面中显示</component>
+  <componentlist>这里的成分会每个之间用特殊符号隔开，以备今后的药物相互作用功能开发时用，目前用不到</componentlist>
+  <specification>说明书的原文，在说明书界面中显示</specification>
+  <property>说明书的原文，在说明书界面中显示</property>
+  <category>说明书的原文，在说明书界面中显示</category>
+  <indication>说明书的原文，在说明书界面中显示</indication>
+  <dosage>说明书的原文，在说明书界面中显示（通常内容在50~70字之间，也有上百字的情况）</dosage>
+  <reaction>说明书的原文，在说明书界面中显示，在特殊人群的信息前后有相应的符号，O老人，E孕妇，C儿童，以备今后实现针对特殊用户有相应的提示，目前只需要按照原文显示即可</reaction>
+  <forbid>说明书的原文，在说明书界面中显示，在特殊人群的信息前后有相应的符号，O老人，E孕妇，C儿童，以备今后实现针对特殊用户有相应的提示，目前只需要按照原文显示即可</forbid>
+  <unit>药物的单位</unit>
+  <period>当药品有疗程时，这里的数据是软件计算结束日期的依据，如果没有就不用为用户自动生成结束日期，默认为“无”，可由用户自行设定</period>
+  <detailedusage>
+    <adutl number="软件生成时候使用的数值" />
+    <expectant number="目前版本不涉及" />
+    <child number="目前版本不涉及" />
+    <old number="目前版本不涉及" />
+  </detailedusage>
+  <alarm>
+    <alarmsub>0</alarmsub>
+  </alarm>
+  <attention>说明书的原文，在说明书界面中显示，在特殊人群的信息前后有相应的符号，O老人，P孕妇，C儿童，以备今后实现针对特殊用户有相应的提示，目前只需要按照原文显示即可</attention>
+  <medication>
+    <expectant>这些信息本应属于“注意事项”或“禁忌”，由中国说明书管理不规范造成，与“不良反应”和“禁忌”做相同对待</expectant>
+    <child>这些信息本应属于“注意事项”或“禁忌”，由中国说明书管理不规范造成，与“不良反应”和“禁忌”做相同对待</child>
+    <old>这些信息本应属于“注意事项”或“禁忌”，由中国说明书管理不规范造成，与“不良反应”和“禁忌”做相同对待</old>
+  </medication>
+  <druginteraction>说明书的原文，在说明书界面中显示</druginteraction>
+  <pharmacodynamics>说明书的原文，在说明书界面中显示</pharmacodynamics>
+  <overdose>说明书的原文，在说明书界面中显示</overdose>
+  <effect>说明书的原文，在说明书界面中显示</effect>
+  <toxicology>说明书的原文，在说明书界面中显示</toxicology>
+  <pharmacokinetics>说明书的原文，在说明书界面中显示</pharmacokinetics>
+  <store>说明书的原文，在说明书界面中显示</store>
+  <packing number="每包装含有多少药品，目前版本并无用处，在以后可以方便用户购买药品时，计算若干盒药能用的时间" unit="这个单位与之前的单位相同，可以删除">说明书的原文，在说明书界面中显示</packing>
+  <validity>说明书的原文，在说明书界面中显示</validity>
+  <standard>说明书的原文，在说明书界面中显示</standard>
+  <guarantee>药品的有效期，目前版本并无用处，在以后可以自动提醒用户药品到期</guarantee>
+  <approval>H10910003</approval>
+  <editdate>说明书的原文，在说明书界面中显示</editdate>
+  <enterprises>说明书的原文，在说明书界面中显示</enterprises>
+</root>

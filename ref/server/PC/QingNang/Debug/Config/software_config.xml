@@ -1,0 +1,9 @@
+<Config Date="2012/3/31 18:22:43">
+	<NetWork Tool="Socket" ListenPort="8866" MaxListenThreadNumber="30"></NetWork>
+<!--the path of the new version of the software is a relative path, which is based on the path of the exe.-->
+	<NewVerSoftWare Path="\NewSoftWare\QingNang.apk"></NewVerSoftWare>
+	<DataBase ConnectString="Data Source = lpc:(local)\OiMAXSQL; Database = QingNang; User ID = QingNang; Password = asdfg12345"></DataBase>
+	<SoftWare VerCode="1.0.0.0"></SoftWare>
+	<ThreadPool MaxThreads="10" CompletionPorts="10"></ThreadPool>
+	<Layer IsSendToGUI="true"></Layer>
+</Config>

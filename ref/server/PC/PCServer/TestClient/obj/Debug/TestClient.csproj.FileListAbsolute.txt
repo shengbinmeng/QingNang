@@ -1,0 +1,24 @@
+G:\for rh\svn\trunk\PC\PCServer\TestClient\bin\Debug\TestClient.exe
+G:\for rh\svn\trunk\PC\PCServer\TestClient\bin\Debug\TestClient.pdb
+G:\for rh\svn\trunk\PC\PCServer\TestClient\obj\Debug\ResolveAssemblyReference.cache
+G:\for rh\svn\trunk\PC\PCServer\TestClient\obj\Debug\MainWindow.baml
+G:\for rh\svn\trunk\PC\PCServer\TestClient\obj\Debug\MainWindow.g.cs
+G:\for rh\svn\trunk\PC\PCServer\TestClient\obj\Debug\App.g.cs
+G:\for rh\svn\trunk\PC\PCServer\TestClient\obj\Debug\TestClient_MarkupCompile.cache
+G:\for rh\svn\trunk\PC\PCServer\TestClient\obj\Debug\TestClient.g.resources
+G:\for rh\svn\trunk\PC\PCServer\TestClient\obj\Debug\QingNang.TestClient.Properties.Resources.resources
+G:\for rh\svn\trunk\PC\PCServer\TestClient\obj\Debug\TestClient.csproj.GenerateResource.Cache
+G:\for rh\svn\trunk\PC\PCServer\TestClient\obj\Debug\TestClient.exe
+G:\for rh\svn\trunk\PC\PCServer\TestClient\obj\Debug\TestClient.pdb
+G:\for rh\svn\trunk\PC\PCServer\TestClient\bin\Debug\LitJson.dll
+G:\for rh\svn\trunk\PC\PCServer\TestClient\bin\Debug\ProtocolClassLibary.dll
+G:\for rh\svn\trunk\PC\PCServer\TestClient\bin\Debug\ProtocolClassLibary.pdb
+G:\for rh\svn\trunk\PC\PCServer\TestClient\bin\Debug\ProtocolClassLibary.xml
+G:\for rh\svn\trunk\PC\PCServer\TestClient\bin\Debug\NetWorkLayer.dll
+G:\for rh\svn\trunk\PC\PCServer\TestClient\bin\Debug\CommonClass.dll
+G:\for rh\svn\trunk\PC\PCServer\TestClient\bin\Debug\CommonClass.pdb
+G:\for rh\svn\trunk\PC\PCServer\TestClient\bin\Debug\NetWorkLayer.pdb
+G:\for rh\svn\trunk\PC\QingNang\Debug\TestClient.exe
+G:\for rh\svn\trunk\PC\QingNang\Debug\TestClient.pdb
+C:\Documents and Settings\Administrator\桌面\trunk\PC\PCServer\TestClient\obj\Debug\TestClient.exe
+C:\Documents and Settings\Administrator\桌面\trunk\PC\PCServer\TestClient\obj\Debug\TestClient.pdb

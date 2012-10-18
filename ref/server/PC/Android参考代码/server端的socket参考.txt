@@ -1,0 +1,89 @@
+      //server端的发送函数。需要ProtocolHelperClass类的函数帮助转换。协议格式参见“协议说明.docx。”
+        public void SendDatas(String str)
+        {
+            byte[] bydatas = Encoding.UTF8.GetBytes(str);
+            byte[] bySends = new byte[bydatas.Length + 4];
+
+            ProtocolHelperClass.Int32ToBytesHelper(bySends.Length, 4, bySends, 0);
+            Array.Copy(bydatas, 0, bySends, 4, bydatas.Length);
+
+            Socket sk = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+            try
+            {
+                //用socket连接一个IP地址。此处IP为本机IP地址。端口号为6685.
+                sk.Connect(IPAddress.Parse("127.0.0.1"), iListenPort);
+                //发送字节数组。
+                sk.Send(bySends);
+                Byte[] byLen = new Byte[4];
+                sk.Receive(byLen);
+	//按照协议格式，得到发送的数组长度的协议编码。（发送数组长度=4+实际数据经过Byte化之后的长度）。
+                UInt32 iLen = ProtocolHelperClass.BytesToInt32Helper(byLen, 0, 4);
+                //接收来自服务器的应答。
+                Byte[] byRec = new Byte[iLen - 4];
+                sk.Receive(byRec);
+	//获取字符串。
+                String strTemp = Encoding.UTF8.GetString(byRec);
+	//反序列化，得到对象。
+                JsonData jd = JsonMaper.toObject(strTemp);
+                sk.Shutdown(SocketShutdown.Both);
+                sk.Close();
+            }
+            catch (Exception er)
+            {
+                sk.Shutdown(SocketShutdown.Both);
+                sk.Close();
+            }
+        }
+
+/// <summary>
+    /// 协议管理器的帮助类，提供一些与协议相关的帮助函数。
+    /// </summary>
+    public class ProtocolHelperClass
+    {
+        /// <summary>
+        /// 将大端模式表示的字节整型转换为C#的格式。
+        /// </summary>
+        /// <param name="bytes">传入的字节。</param>
+        /// <param name="start">索引开始位置。</param>
+        /// <param name="len">实际需要处理的长度。</param>
+        /// <returns></returns>
+        static public UInt32 BytesToInt32Helper(Byte[] bytes, Int32 start, Int32 len)
+        {
+            UInt32 iTemp = 0;
+            if (len <= 4 && start >= 0 && (start + len) <= bytes.Length)
+            {
+                for (Int32 i = start; i < start + len; i++)
+                {
+                    iTemp <<= 8;
+                    iTemp += (UInt32)bytes[i];
+                }
+            }
+
+            return iTemp;
+        }
+
+        /// <summary>
+        /// 将一个Int32类型的data数据，转换成targetlen指定长度的一个byte字节数组,并存放于target中以start开始的位置。
+        /// </summary>
+        /// <param name="data">需要转换的数字。</param>
+        /// <param name="targetlen">需要转换成的字节长度。</param>
+        /// <param name="target">目标数组。</param>
+        /// <param name="start">目标数组中开始的位置。</param>
+        static public Boolean Int32ToBytesHelper(Int32 data, Int32 targetlen, Byte[] target, Int32 start)
+        {
+            if (targetlen > 0 && targetlen <= 4 && (start + targetlen) <= target.Length)
+            {
+                for (Int32 i = 1; i <= targetlen; i++)
+                {
+                    target[start + targetlen - i] = (Byte)(data & 0x000000FF);
+                    data >>= 8;
+                }
+
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+    }

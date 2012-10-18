@@ -1,0 +1,10 @@
+﻿<Window x:Class="QingNang.TestClient.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="TestClient" Height="300" Width="300">
+    <Grid>
+        <Label Margin="22,78,0,0" Name="label1" Height="28" VerticalAlignment="Top" HorizontalAlignment="Left" Width="55">操作码：</Label>
+        <TextBox Height="23" Margin="83,78,0,0" Name="tbOpCode" VerticalAlignment="Top" HorizontalAlignment="Left" Width="120" />
+        <Button Height="23" Margin="109,153,0,0" Name="btOk" VerticalAlignment="Top" HorizontalAlignment="Left" Width="76" Click="btOk_Click">确认</Button>
+    </Grid>
+</Window>

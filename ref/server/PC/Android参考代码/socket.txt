@@ -1,0 +1,70 @@
+	public static String host = "192.168.1.108";
+	static int port = 6685;
+
+	static String SOCKET_ERROR = "socket error";
+
+	// Create Protocol
+	private static byte[] createProtocol(byte[] bySend1, byte[] bySend2) {
+		byte[] bySend = new byte[12 + bySend1.length + bySend2.length];
+
+		// create protocol
+		ProtocolHelper.Int32ToBytesHelper(bySend.length, 4, bySend, 0);
+		ProtocolHelper.Int32ToBytesHelper(2, 2, bySend, 6);
+		ProtocolHelper.Int32ToBytesHelper(bySend1.length, 4, bySend, 8);
+
+		System.arraycopy(bySend1, 0, bySend, 12, bySend1.length);
+		System.arraycopy(bySend2, 0, bySend, 12 + bySend1.length,
+				bySend2.length);
+
+		return bySend;
+	}
+
+	// 接收Activity传过来的两个JSONObject，转换成byte[],向服务端发送数据
+	// 接收服务器端传回的byte[]数据，并转换成对应的第二个JSONObject对象
+	public static Object socketMsgOpera(Object obj1, Object obj2)
+			throws UnknownHostException, IOException, JSONException {
+		// 将JSONObject转成JSONString，之后在转成byte[]
+		Gson gson = new Gson();
+		String sobj1 = gson.toJson(obj1);
+		String sobj2 = gson.toJson(obj2);
+
+		byte[] bySend1 = sobj1.getBytes("utf-8");
+		byte[] bySend2 = sobj2.getBytes("utf-8");
+
+		// 构造协议，获得完整的要发送的byte[]
+		byte[] bySend = createProtocol(bySend1, bySend2);
+
+		// 建立socket通信，发送数据
+
+		Socket socket = new Socket(); // 建立
+		SocketAddress socAddress = new InetSocketAddress(host, port); 
+		socket.connect(socAddress, 5000);
+		if (socket != null) {
+			OutputStream os = new DataOutputStream(socket.getOutputStream()); // 发送
+			os.write(bySend);
+			os.flush();
+
+			// 接收
+			InputStream is = socket.getInputStream();
+			byte[] byLen = new byte[8];
+			is.read(byLen);
+			int totalLen = ProtocolHelper.BytesToInt32Helper(byLen, 0, 4);
+			byte[] byFstLen = new byte[4];
+			is.read(byFstLen);
+			int FstLen = ProtocolHelper.BytesToInt32Helper(byFstLen, 0, 4);// 第一个对象的字节数
+			byte[] byRec1 = new byte[FstLen]; // 获得第一个对象的byte[]
+			is.read(byRec1);
+			int SecLen = totalLen - 12 - FstLen;
+			byte[] byRec2 = new byte[SecLen]; // 获得第二个对象的byte[]
+			int currentLen = 0;
+			int readLen = 0;
+			while(currentLen < SecLen) {
+				readLen = is.read(byRec2, currentLen, SecLen - currentLen);
+				if (readLen > 0) {
+					currentLen += readLen;
+				} else {
+					break;
+				}
+			}
+		}
+	}

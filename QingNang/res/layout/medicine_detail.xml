@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <TextView
+        android:id="@+id/title"
+        android:textSize="20dp"
+		android:textStyle="bold"
+		android:typeface="serif"
+	    android:layout_width="wrap_content" 
+	    android:layout_height="wrap_content"
+	    android:layout_gravity="center"> 
+	</TextView>
+	<LinearLayout
+	    android:orientation="horizontal"
+		android:layout_width="fill_parent"
+    	android:layout_height="80dp">
+    	<ImageView
+	        android:contentDescription="@string/picture"
+	        android:src="@android:drawable/ic_media_next"
+			android:id="@+id/medicine_image"
+			android:layout_weight="2"
+			android:layout_width="0dp"
+			android:layout_height="fill_parent"
+			android:scaleType="fitCenter"/>
+	    <TextView
+		 	android:id="@+id/medicine_name"
+		 	android:layout_weight="8"
+		 	android:layout_width="0dp" 
+		    android:layout_height="fill_parent" ></TextView>  
+	</LinearLayout>
+    <ListView
+	 	android:id="@android:id/list"
+	 	android:layout_width="fill_parent" 
+	    android:layout_height="wrap_content">
+    </ListView>
+    
+</LinearLayout>

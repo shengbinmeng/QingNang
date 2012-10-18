@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen 
+	xmlns:android="http://schemas.android.com/apk/res/android" 
+	android:title="Settings">
+	<PreferenceCategory
+		android:title="About" xmlns:android="http://schemas.android.com/apk/res/android">
+		<Preference android:title="About QingNang" android:key="about_this_app"></Preference>
+	</PreferenceCategory>
+	<PreferenceCategory 
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		android:title="Setting Categary 1"
+		android:summary="settings about 1">
+		<CheckBoxPreference 
+			android:title="Check Box 1" 
+			android:summaryOn="checked"
+			android:summaryOff="unchecked"
+			android:defaultValue="false" android:key="only_media_switch">
+		</CheckBoxPreference>
+		<CheckBoxPreference 
+			android:title="Check Box 2" 
+			android:summaryOn="checked"
+			android:summaryOff="unchecked"
+			android:defaultValue="false" android:key="show_hidden_switch">
+		</CheckBoxPreference>		
+	</PreferenceCategory>
+	<PreferenceCategory
+		android:title="Setting Categary 2" xmlns:android="http://schemas.android.com/apk/res/android">
+		<ListPreference
+			android:key="list_preference"    
+			android:title="List Preference"
+			android:summary="select one from multiple options"
+			android:entries="@array/list_options"    
+			android:entryValues="@array/list_options"
+			android:dialogTitle="Select One:"    
+			android:defaultValue="1">
+		</ListPreference>
+	</PreferenceCategory>
+	<PreferenceCategory android:title="Advanced">
+		<EditTextPreference
+	    android:key="custom_server"
+		android:title="Custom Server"
+		android:summary="Don't change this unless you know what you are doing"
+		android:defaultValue="www.qingnang.com"
+		android:dialogTitle="Change Server" />
+	</PreferenceCategory>	
+</PreferenceScreen>

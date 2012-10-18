@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <TextView
+	 	android:id="@+id/reminder_medicine"
+	 	android:layout_weight="7"
+	 	android:layout_width="0dp" 
+	    android:layout_height="44dp" 
+	    android:gravity="center_vertical" 
+	    android:paddingLeft="20dp"/>
+    <ImageView
+        android:contentDescription="@string/picture"
+        android:src="@android:drawable/ic_delete"
+		android:id="@+id/reminder_delete_icon"
+		android:layout_weight="1"
+		android:layout_width="0dp"
+		android:layout_height="fill_parent"
+		android:scaleType="fitCenter"/>
+</LinearLayout>
