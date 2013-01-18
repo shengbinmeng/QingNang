@@ -18,7 +18,6 @@ import com.google.zxing.client.result.ParsedResult;
 import com.google.zxing.client.result.ResultParser;
 
 import com.zijunlin.Zxing.Demo.CaptureActivity;
-import com.zijunlin.Zxing.Demo.R;
 import com.zijunlin.Zxing.Demo.decoding.InactivityTimer;
 import com.zijunlin.Zxing.Demo.view.ViewfinderView;
 
