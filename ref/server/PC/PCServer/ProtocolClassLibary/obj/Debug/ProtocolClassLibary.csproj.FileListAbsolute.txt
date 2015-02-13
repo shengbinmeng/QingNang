@@ -1,7 +1,0 @@
-G:\for rh\svn\trunk\PC\PCServer\ProtocolClassLibary\bin\Debug\ProtocolClassLibary.dll
-G:\for rh\svn\trunk\PC\PCServer\ProtocolClassLibary\bin\Debug\ProtocolClassLibary.pdb
-G:\for rh\svn\trunk\PC\PCServer\ProtocolClassLibary\obj\Debug\ResolveAssemblyReference.cache
-G:\for rh\svn\trunk\PC\PCServer\ProtocolClassLibary\obj\Debug\ProtocolClassLibary.dll
-G:\for rh\svn\trunk\PC\PCServer\ProtocolClassLibary\obj\Debug\ProtocolClassLibary.pdb
-G:\for rh\svn\trunk\PC\QingNang\Debug\ProtocolClassLibary.dll
-G:\for rh\svn\trunk\PC\QingNang\Debug\ProtocolClassLibary.pdb
